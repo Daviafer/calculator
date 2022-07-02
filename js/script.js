@@ -24,7 +24,7 @@ class Calculator {
   processOperation(operation) {
 
     /* verificando se valor atual é vazio */
-    if (this.currentOperationText.innerText === "") {
+    if (this.currentOperationText.innerText === "" && operation !== "C") {
         /* mudar operação */
       if (this.previousOperationText.innerText !== "") {
         this.changeOperation(operation)
@@ -34,8 +34,8 @@ class Calculator {
 
     /* pegar valor atual e anterior */
     let operationValue;
-    const previous = +this.previousOperationText.innerText.split(" ")[0];
-    const current = +this.currentOperationText.innerText;
+    const previous = +this.previousOperationText.innerText.split(" ")[0]
+    const current = +this.currentOperationText.innerText
 
     switch (operation) {
       case "+":
@@ -53,6 +53,18 @@ class Calculator {
       case "*":
         operationValue = previous * current
         this.updateScreen(operationValue, operation, current, previous)
+        break;
+      case "DEL":
+        this.processDelOperator()
+        break;
+      case "CE":
+        this.processClearCurrentOperation()
+        break;
+      case "C":
+        this.processClearOperation()
+        break;
+      case "=":
+        this.processEqualOperator()
         break;
 
       default:
@@ -84,6 +96,25 @@ class Calculator {
     }
     this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0,-1) + operation
   }
+  /* Deletando último digito */
+  processDelOperator(){
+    this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0, -1)
+  }
+  /* Limpando operação atual */
+  processClearCurrentOperation(){
+    this.currentOperationText.innerText = ""
+  }
+  /* limpando tudo */
+  processClearOperation(){
+    this.currentOperationText.innerText = ""
+    this.previousOperationText.innerText = ""
+  }
+  /* Igual */
+  processEqualOperator(){
+    const operation = previousOperationText.innerText.split(" ")[1]
+    this.processOperation(operation)
+  }
+
 } /* Fim classe Calculator */
 
 /* Estanciando o objeto após construtor */
