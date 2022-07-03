@@ -14,4 +14,4 @@ O projeto proporcionou melhor entendimento do JavaScrip com suas diversas funcio
 	🚧  Status: 🚀 finalizado ... (podendo melhorar)  🚧
 </h3>
 
-### Para ver o projeto [clique aqui!](https://daviafer.github.io/landing-page-dev-quest/)
+### Para ver o projeto [clique aqui!](https://daviafer.github.io/calculator/)
