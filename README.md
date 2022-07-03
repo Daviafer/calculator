@@ -14,4 +14,7 @@ O projeto proporcionou melhor entendimento do JavaScrip com suas diversas funcio
 	🚧  Status: 🚀 finalizado ... (podendo melhorar)  🚧
 </h3>
 
+![calc](https://user-images.githubusercontent.com/20827126/177019646-ef4bb984-7a5a-4dc0-8523-ee8c376e10c3.png)
+
+
 ### Para ver o projeto [clique aqui!](https://daviafer.github.io/calculator/)
